@@ -1,0 +1,129 @@
+#intro {
+  height: 100vh;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 2rem;
+  box-sizing: border-box;
+
+  min-height: calc(100vh - 4rem); /* ✔ Correct usage */
+  padding-top: 4rem; /* if you have a fixed navbar */
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.15;
+  filter: blur(2px);
+}
+
+.introContent {
+  max-width: 700px;
+  color: #fff;
+  z-index: 1;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hello {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #bbb;
+}
+
+.introText {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.introName {
+  color: #ffd700;
+}
+
+.role {
+  color: #00bfff;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.introPara {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin: 1rem 0;
+  line-height: 1.6;
+  color: #ddd;
+  max-width: 90%;
+}
+
+.btn {
+  background: #00bfff;
+  color: white;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: #009acd;
+  transform: scale(1.05);
+}
+
+.btnimg {
+  margin-right: 0.5rem;
+  height: 1.2rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 840px) {
+  #intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .introContent {
+    font-size: 5vw;
+    padding: 1rem;
+  }
+
+  .hello {
+    font-size: 1.5rem;
+  }
+
+  .introText {
+    font-size: 2rem;
+  }
+
+  .role {
+    font-size: 1.5rem;
+  }
+
+  .bg {
+    display: none;
+  }
+}
